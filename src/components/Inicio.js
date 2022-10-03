@@ -11,11 +11,12 @@ export default function Inicio({ iniciar, validado, validaDackSelecionado }) {
       <Logo src={logo} />
       <Titulo>ZapRecall</Titulo>
       <ComboDack
+        data-identifier="deck-selector"
         defaultValue="0"
         name="dack"
         onChange={(e) => validaDackSelecionado(e.target.value)}
       >
-        <option value="0" disabled>
+        <option value="0" disabled data-identifier="deck-option">
           Escolha seu dack
         </option>
         {DADOS.map((dado) => {
@@ -27,6 +28,7 @@ export default function Inicio({ iniciar, validado, validaDackSelecionado }) {
         })}
       </ComboDack>
       <Botao
+        data-identifier="start-btn"
         onClick={() => {
           iniciar(true);
           setVisivel(false);

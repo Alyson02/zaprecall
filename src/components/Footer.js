@@ -8,7 +8,7 @@ export default function Footer({
 }) {
   return (
     <FooterConcluidos>
-      <p>
+      <p data-identifier="flashcard-counter">
         {proguesso}/{quantidadeCards} CONCLUÍDOS
       </p>
       <ul>
